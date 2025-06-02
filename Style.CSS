@@ -1,0 +1,45 @@
+body{
+    height:800px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom right,rgb(0, 0, 0), rgb(61, 23, 92), rgb(62, 49, 177), rgb(73, 22, 94));
+}
+h1 {
+    color: #58A6FF;
+}
+a{
+    color: #626971;
+}
+a:hover {
+    color: #2e6ccf
+}
+ul>li{
+    font-weight: bold;
+    color:#e3e8ee
+}
+h1+p {
+    background-color: #e3e8ee;
+    padding: 10px;
+    border-radius: 5px;
+}
+ul li:hover {
+    color: #4F8CC9;
+}
+ul li:nth-child(3) {
+    background-color: #70596c;
+}
+p:not(:first-of-type) {
+    text-decoration: underline;
+}
+ul li::before {
+    content:"🚀";
+}
+a::after {
+    content: "🌌"
+}
+p::first-letter{
+    font-size: 200%;
+    color: #FF7B72;
+}
+p {
+    color:aliceblue
+}
