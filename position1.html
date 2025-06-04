@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 200vh;
+            color: rgb(24, 27, 51);
+           
+        }
+        div {
+            right: 30px;
+            border: 3px solid rgb(76, 181, 207);
+        }
+        div.fixed {
+            position: fixed;
+            top: 0;
+            right: 20px;
+            width: 300px;
+            border: 3px solid cornflowerblue;
+        }
+        div.sticky{
+            position: sticky;
+            top: 1px;
+            left: 20px;
+            width: 100px;
+            border: 3px solid cornflowerblue;
+        }
+        div.absolute {
+            position: absolute;
+            left: 50px;
+            border: 3px solid blue
+        }
+        div.relative{
+            position: relative;
+            top: 0;
+            right: 20px;
+            width: 300px;
+            border: 3px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>POSITIONING</h2>
+    <div> Div with no position property</div>
+    <div class="sticky"> Div with sticky position property</div>
+    <div class="fixed"> Div with fixed position property</div>
+    <div class="absolute"> Absolute class DIV</div><br>
+    <div class="relative"> This div has position relative</div>
+</body>
+</html>
