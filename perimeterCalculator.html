@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perimeter calcuation</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+<style>
+    .jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1{
+    color: rgb(48, 48, 112);
+}
+p{
+    color: rgb(29, 22, 124);
+}
+</style>
+<body>
+    <center>
+    <h1 class="jersey-10-regular">Perimeter Calculator</h1>
+    <img src="https://i.pinimg.com/736x/df/39/e0/df39e03d395a4f319e4c230680125999.jpg" alt="calculator">
+    <p class="jersey-10-regular">Refresh to try again.</p>
+    </center>
+    <script>
+       var choice = prompt("Welcome to Perimeter calculator \n Please enter your choice: \n1. Rectangle \n2. Triangle \n3. Circle \n4. Square");
+       if (choice === "1") {
+        var length = parseFloat(prompt("Enter the length of the Rectangle:"));
+        var width = parseFloat(prompt("Enter the width of the Rectangle:"));
+        var area = length * width;
+        alert("The area of the Rectangle is " + area);
+       } else if (choice ==="2") {
+        var base = parseFloat(prompt("Enter the base of the Triangle"));
+        var height = parseFloat(prompt("Enter the height of the Triangle"));
+        var area = 0.5 * base * height;
+        alert("The area of the Triangle is " + area);
+       } else if (choice ==="3") {
+        var radius = parseFloat(prompt("Enter the radius of the Circle:"));
+        var area = 3.14 * radius * radius
+        alert("The area of the Circle is " + area );
+       } else if (choice ==="4") {
+        var length = parseFloat(prompt("Enter the length of a side of the Square"));
+        var area = length * length;
+        alert("The area of the Square is " + area);
+       }
+    </script>
+</body>
+</html>
