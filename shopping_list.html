@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=">
+    <title>Shopping list</title>
+    <style>
+        h1 {
+            color: rgb(82, 30, 131);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 50px;
+        }
+        h3 {
+            color: white;
+            text-shadow: 2px 2px rgb(82, 30, 131);
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body {
+            padding:100px;
+            background-image: url(purplle\ wallpaper.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+             }
+        button {
+            background-color: rgb(187, 67, 187);
+            border: none;
+            color: white;
+            padding: 5px 5px;
+        } 
+        #myItem {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h1> Add your Shopping items here 🛒</h1>
+    <form id="myform">
+        <input id="myInput" type="text">
+        <button type="submit">Add</button>
+    </form>
+    <h3>Shopping List:</h3>
+    <ul id="myItem"></ul>
+    </center>
+    <script>
+        var myform = document.getElementById("myform");
+        var myInput = document.getElementById("myInput");
+        var myItem = document.getElementById("myItem");
+        
+        myform.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const trimmedinput = myInput.value.trim();
+            if (trimmedinput === "") {
+                alert("Please enter a non-empty item.");
+                myInput.value = "";
+                myInput.focus();
+                return;
+            }
+            createItem(trimmedinput)
+        })
+
+        function createItem(inputText){
+            const li = document.createElement("li");
+            li.textContent = inputText + " "
+
+        const delBtn = document.createElement("button");
+        delBtn.textContent = "Delete";
+        delBtn.addEventListener("click", function() {
+            deleteElement(delBtn)
+        });
+    li.appendChild(delBtn);
+    myItem.appendChild(li);
+
+    myInput.value = "";
+    myInput.focus();
+        }
+        function deleteElement(button) {
+            button.parentElement.remove();
+        }
+        
+    </script>
+</body>
+</html>
