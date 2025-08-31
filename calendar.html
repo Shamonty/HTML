@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(https://i.pinimg.com/1200x/73/df/e0/73dfe000c1d9f9774158512f59abf1c3.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 100px;
+        }
+        h1{
+            color: white;
+            text-shadow: 2px 2px rgb(7, 6, 32);
+            font-size: 100px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #DateDisplay {
+            font-size: 48px;
+            color: #ffffff;
+            background-color: rgba(0, 18, 97, 0.582);
+            padding: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            display:inline-block;
+        }
+    </style>
+</head>
+<body onload="showdate()">
+    <center>
+        <h1>TODAY'S DATE</h1>
+    <div id="DateDisplay"></div>
+    </center>
+    <script>
+        function showdate() {
+            var date = new Date();
+            var d = date.getDate();
+            var m = date.getMonth() + 1;
+            var y = date.getFullYear();
+            var fulldate = d + "/" + m + "/" + y
+            document.getElementById("DateDisplay").innerHTML = fulldate;
+        }
+    </script>
+</body>
+</html>
