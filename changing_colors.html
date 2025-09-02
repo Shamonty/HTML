@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 250px;
+        }
+        button {
+            padding: 10px 10px;
+            border: none;
+            color: rgb(255, 254, 254);
+            background-color: rgb(28, 17, 182);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Click the button to change background color.</h1>
+    <button onclick="changingcolor()">Click me!</button>
+    </center>
+    <script>
+        function changingcolor() {
+        var r = Math.random() * 250
+        var b = Math.random() * 250
+        var g = Math.random() * 250
+        var bgcolor = "rgb(" + r + "," + b + "," + g + ")";
+        document.body.style.background = bgcolor;
+    }
+        
+    </script>
+</body>
+</html>
