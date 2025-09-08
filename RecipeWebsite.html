@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><Data>YumYum Recipes</Data></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Erica+One&family=Limelight&display=swap" rel="stylesheet">
+    <style>
+        .limelight-regular {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+        body {
+            background-image: url(bbbbblue.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(103, 132, 158, 0.5); /* white overlay, 50% opacity */
+  z-index: -1; /* stays behind content */
+}
+        ul {
+            list-style-type: none;
+            margin:0;
+            padding: 0;
+            overflow: hidden;
+            background-color: none;
+        }
+        ul li a {
+           display: block;
+           color: rgb(19, 22, 44);
+           padding: 14px 16px;
+           text-decoration: none;
+           font-size: 25px;
+        }
+        #name {
+            font-size: 20px;
+            color: white;
+            padding: 8px 25px;
+            font-size: 40px;
+        }
+        h3 {
+            padding-top: 230px; 
+            font-size: 25px;
+            color: rgb(13, 13, 66);
+        }
+        h1 {
+            font-size: 80px;
+            color: rgb(13, 13, 66);
+        }
+        button {
+            background-color: white;
+            border: none;
+            color: rgb(13, 13, 66);
+            padding: 10px 15px;
+            border-radius: 15px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+ <ul>
+    <li style="float:left" id="name" class="limelight-regular">YumYum Recipes</li>
+    <li style="float:right"><a href="#">Recipes</a></li>
+    <li style="float:right"><a href="#">Shop</a></li>
+    <li style="float:right"><a href="#">About</a></li>
+    <li style="float:right"><a href="#">Home</a></li>
+ </ul>
+ <center>
+    <h3>WELCOME TO</h3>
+    <h1 class="limelight-regular">YumYum Recipes</h1>
+    <button><b>About us</b></button>
+ </center>
+</body>
+</html>
