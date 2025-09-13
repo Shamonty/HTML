@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 200px;
+        }
+        h1 {
+            font-size: 80px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #value {
+            font-size: 80px;
+        }
+        #increase {
+            background-color: rgb(22, 22, 158);
+            border: none;
+            color: white;
+            padding:15px 15px;
+            font-size: 16px;
+            border-radius: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #increase:hover{
+            background-color: rgb(9, 9, 80);
+            transition-duration: 0.4s;
+        }
+          #decrease {
+            background-color: rgb(22, 22, 158);
+            border: none;
+            color: white;
+            padding:15px 15px;
+            font-size: 16px;
+            border-radius: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+         #decrease:hover{
+            background-color: rgb(9, 9, 80);
+            transition-duration: 0.4s;
+        }
+          #reset {
+            background-color: rgb(22, 22, 158);
+            border: none;
+            color: white;
+            padding:15px 15px;
+            font-size: 16px;
+            border-radius: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+         #reset:hover{
+            background-color: rgb(9, 9, 80);
+            transition-duration: 0.4s;
+        }
+        #countValue {
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div class="buttons">
+        <h1>Counter App</h1>
+        <span id="countValue">00</span> <br> <br> <br> <br> <br>
+        <button id="increase">Increase button</button>
+        <button id="decrease">Decrease button</button>
+        <button id="reset">Reset button</button>
+    </div>
+    </center>
+    <script>
+        const countlabel = document.getElementById('countValue');
+        const increment = document.getElementById('increase');
+        const decrement = document.getElementById('decrease');
+        const reset = document.getElementById('reset');
+        let count = 0
+        increment.addEventListener('click' , () => {
+            count++;
+            updateDisplay()
+        });
+        decrement.addEventListener('click' , () => {
+            count--;
+            updateDisplay()
+        });
+        reset.addEventListener('click' , () => {
+            count = 0;
+            updateDisplay()
+        });
+        function updateDisplay() {
+            countlabel.textContent = count;
+        };
+
+
+
+
+
+
+
+
+
+
+    // const countLabel = document.getElementById('appendValue');
+    // const incrementBtn = document.getElementById('increase');
+    // const decrementBtn = document.getElementById('decrease');
+    // const resetBtn = document.getElementById('reset');
+    // let count = 0;
+    // incrementBtn.addEventListener('click', () => {
+    //     count++;
+    //     updateDisplay();
+    // });
+    // decrementBtn.addEventListener('click', () => {
+    //     count--;
+    //     updateDisplay();
+    // });
+    // resetBtn.addEventListener('click', () => {
+    //     count = 0;
+    //     updateDisplay();
+    // });
+    // function updateDisplay() {
+    //     countLabel.textContent = count;
+    //     }
+</script>
+</body>
+</html>
