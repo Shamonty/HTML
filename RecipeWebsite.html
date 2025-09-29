@@ -14,7 +14,7 @@
   font-style: normal;
 }
         body {
-            background-image: url(bbbbblue.jpg);
+            background-image: url("images/bbbbblue.jpg");
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-position: center;
@@ -22,19 +22,23 @@
         }
         body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-color: rgba(103, 132, 158, 0.5); /* white overlay, 50% opacity */
-  z-index: -1; /* stays behind content */
+  background-color: rgba(103, 132, 158, 0.5); 
+  z-index: -1; 
 }
-        ul {
-            list-style-type: none;
-            margin:0;
-            padding: 0;
-            overflow: hidden;
-            background-color: none;
-        }
+       ul {
+list-style-type:none;
+margin:0;
+padding: 0;
+overflow: hidden;
+background-color: rgba(255, 253, 253, 0.5);
+position: fixed;
+top: 0;
+width: 100%;
+left:0;
+}
         ul li a {
            display: block;
            color: rgb(19, 22, 44);
@@ -44,12 +48,12 @@
         }
         #name {
             font-size: 20px;
-            color: white;
+            color: rgb(0, 0, 0);
             padding: 8px 25px;
             font-size: 40px;
         }
         h3 {
-            padding-top: 230px; 
+            padding-top: 380px; 
             font-size: 25px;
             color: rgb(13, 13, 66);
         }
@@ -64,21 +68,72 @@
             padding: 10px 15px;
             border-radius: 15px;
             font-size: 15px;
+            transition: 0.3s ease;
         }
+        ul li a:hover{
+            color: rgb(84, 96, 187);
+        }
+        button:hover{
+            color: rgb(17, 20, 41);
+            background-color: rgb(172, 173, 179);
+        }
+        footer {
+             position: scroll;
+             bottom: 0;
+             left: 0;
+             width: 100%;
+             background-color: rgba(255, 253, 253, 0.8);
+             text-align: center;
+             padding: 10px 9px;
+             margin: -10px -10px;
+            }
+            #name:hover{
+                color: rgb(38, 44, 87);
+            }
+            .mySlides{
+                padding: 120px 20px;
+            }
     </style>
 </head>
 <body>
+
  <ul>
     <li style="float:left" id="name" class="limelight-regular">YumYum Recipes</li>
-    <li style="float:right"><a href="#">Recipes</a></li>
-    <li style="float:right"><a href="#">Shop</a></li>
-    <li style="float:right"><a href="#">About</a></li>
-    <li style="float:right"><a href="#">Home</a></li>
+    <li style="float:right"><a href="recipes.html" target="_blank">Recipes</a></li>
+    <li style="float:right"><a href="shop.html" target="_blank">Shop</a></li>
+    <li style="float:right"><a href="about.html" target="_blank">About</a></li>
+    <li style="float:right"><a href="RecipeWebsite.html">Home</a></li>
  </ul>
+
  <center>
     <h3>WELCOME TO</h3>
     <h1 class="limelight-regular">YumYum Recipes</h1>
-    <button><b>About us</b></button>
+    <button onclick="window.location.href='recipes.html'"><b>See Recipes</b></button>
+<section>
+    <img class="mySlides" src="images/cake.png" style="height: 500px; width: 500px;">
+    <img class="mySlides" src="images/french fries.png" style="height: 500px; width: 500px;">
+    <img class="mySlides" src="images/pudding.png" style="height: 500px; width: 500px;">
+    <img class="mySlides" src="images/sandwich.png" style="height: 500px; width: 500px;">
+ </section>
  </center>
+ <footer>
+    <p>© 2025 YumYum Recipes. All rights reserved.</p> 
+</footer>
+
+<script>
+    var myIndex= 0;
+    carousel();
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i< x.length ; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 1000);
+    }
+</script>
 </body>
 </html>
