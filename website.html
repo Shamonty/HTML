@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet"/>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+     <style>
+   :root {
+     --cream: #f5eee0;
+     --dark: #1e1e1a;
+     --accent: #c8703a;
+   }
+   body {
+     font-family: 'Lato', sans-serif;
+     background: var(--cream);
+     color: var(--dark);
+   }
+
+   /* Navbar */
+   .navbar {
+     background: var(--dark) !important;
+     padding: 1.2rem 2rem;
+   }
+
+   .navbar-brand {
+     font-family: 'Playfair Display', serif;
+     font-size: 1.6rem;
+     color: var(--cream) !important;
+     letter-spacing: 1px;
+   }
+.nav-link {
+     color: #ccc !important;
+     font-weight: 300;
+     letter-spacing: 1.5px;
+     text-transform: uppercase;
+     font-size: 0.85rem;
+     margin: 0 0.5rem;
+     transition: color 0.2s;
+   }
+
+   .nav-link:hover,
+   .nav-link.active {
+     color: var(--accent) !important;
+   }
+
+   /* Carousel */
+   .carousel {
+     margin-top: 0;
+   }
+
+   .carousel-item {
+     height: 85vh;
+     min-height: 400px;
+   }
+
+   .carousel-item img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     filter: brightness(0.7);
+   }
+
+   .carousel-caption {
+     bottom: 25%;
+   }
+
+   .carousel-caption h2 {
+     font-family: 'Playfair Display', serif;
+     font-size: clamp(2rem, 5vw, 3.8rem);
+     font-weight: 700;
+     text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+     margin-bottom: 0.5rem;
+   }
+   .carousel-caption p {
+     font-size: 1.1rem;
+     font-weight: 300;
+     letter-spacing: 1px;
+     text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+   }
+
+   .carousel-indicators [data-bs-target] {
+     background-color: var(--accent);
+     width: 30px;
+     height: 3px;
+     border-radius: 0;
+   }
+
+   .carousel-control-prev-icon,
+   .carousel-control-next-icon {
+     filter: invert(1);
+   }
+
+   /* Welcome section */
+   .welcome-section {
+     padding: 5rem 2rem;
+     text-align: center;
+     max-width: 720px;
+     margin: 0 auto;
+   }
+
+   .welcome-section h1 {
+     font-family: 'Playfair Display', serif;
+     font-size: 2.5rem;
+     margin-bottom: 1rem;
+   }
+
+   .welcome-section p {
+     font-size: 1.1rem;
+     line-height: 1.8;
+     color: #555;
+     font-weight: 300;
+   }
+
+   .divider {
+     width: 50px;
+     height: 3px;
+     background: var(--accent);
+     margin: 1.5rem auto;
+   }
+
+   /* Footer */
+   footer {
+     background: var(--dark);
+     color: #aaa;
+     text-align: center;
+     padding: 1.5rem;
+     font-size: 0.85rem;
+     font-weight: 300;
+     letter-spacing: 1px;
+   }
+ </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">TastyEats</a>
+            <button class="navbar-toggler" type="button" 
+            data-bs-toggle="collapse" data-bs-target="#mainNav"
+             aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="filter:invert(1)"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#"></a>Home</li>
+                    <li class="nav-item"><a class="nav-link" href="#"></a>Recipes</li>
+                    <li class="nav-item"><a class="nav-link" href="#"></a>Contact me</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="caraousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"> </button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="https://s.lightorangebean.com/media/20240914160809/Spicy-Penne-Pasta_-done.png" alt="food 1">
+                <div class="carousel-caption">
+                    <h2>Taste the world</h2>
+                    <p>Enjoy recipes from around the globe.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://fishandmeat.hk/wp-content/uploads/2025/05/arabic-chicken-shawarma-sandwich-recipe-1747792750.jpg" alt="food 2">
+                <div class="carousel-caption">
+                    <h2>Discover new flavors</h2>
+                    <p>Explore a variety of cuisines and dishes.</p>
+                </div>
+                </div>
+            <div class="carousel-item">
+                <img src="https://www.allrecipes.com/thmb/EGp48npVJqDku38H1CFWwgwfAmM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/57661-tomato-bisque-iii-VAT-007-4x3-44151fe6eccf42e2b7fecb632f3ff198.jpg" alt="food 3">
+                <div class="carousel-caption">
+                    <h2>Cook with passion</h2>
+                    <p>Find recipes that inspire your culinary creativity.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+        <div class="welcome-section">
+            <h1>Welcome to TastyEats</h1>
+            <div class="divider"></div>
+            <p>A place to share my favorite recipes, food stories, and a little bit of everything. Browse through the collection and find something delicious to make tonight.</p>
+        </div>
+        <footer>
+        <p>&copy; 2026 TastyEats. All rights reserved.</p>
+        </footer>
+
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
