@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+     :root {
+        --cream: #f5eee0;
+        --dark: #1e1e1a;
+        --accent: #c8703a;
+     }
+
+
+     body {
+        font-family: 'Lato', sans-serif;
+        background: var(--cream);
+        color: var(--dark);
+}
+
+
+     /* Navbar */
+     .navbar {
+        background: var(--dark) !important;
+        padding: 1.2rem 2rem;
+     }
+
+
+     .navbar-brand {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        color: var(--cream) !important;
+        letter-spacing: 1px;
+     }
+
+
+     .nav-link {
+        color: #ccc !important;
+        font-weight: 300;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        margin: 0 0.5rem;
+        transition: color 0.2s;
+     }
+
+
+     .nav-link:hover,
+     .nav-link.active {
+        color: var(--accent) !important;
+     }
+
+
+     /* Page Header */
+     .page-header {
+        padding: 4rem 2rem 2rem;
+        text-align: center;
+        background: linear-gradient(135deg, rgba(200, 112, 58, 0.08) 0%, rgba(200, 112, 58, 0.03) 100%);
+     }
+
+
+     .page-header h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+}
+
+
+     .page-header p {
+        font-size: 1.1rem;
+        color: #666;
+        font-weight: 300;
+        letter-spacing: 1px;
+     }
+
+
+     .divider {
+        width: 50px;
+        height: 3px;
+        background: var(--accent);
+        margin: 1.5rem auto;
+     }
+
+
+     /* Recipes Grid */
+     .recipes-container {
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+     }
+
+
+     .recipes-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        max-width: 600px;
+        margin: 0 auto;
+     }
+
+
+     .recipe-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+     }
+
+
+     .recipe-card:hover {
+        transform: translateY(-8px);
+ box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+     }
+
+
+     .recipe-image {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        display: block;
+     }
+
+
+     .recipe-content {
+        padding: 2rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+     }
+
+
+     .recipe-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--dark);
+        font-weight: 700;
+     }
+
+
+     .recipe-caption {
+        font-size: 0.95rem;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+     }
+
+
+     .recipe-button {
+        background: var(--accent);
+        color: white;
+        border: none;
+        padding: 0.85rem 1.5rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border-radius: 4px;
+ cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+        align-self: flex-start;
+     }
+
+
+     .recipe-button:hover {
+        background: #a65a2e;
+        transform: scale(1.05);
+     }
+
+
+     .recipe-button:active {
+        transform: scale(0.98);
+     }
+
+
+     /* Footer */
+     footer {
+        background: var(--dark);
+        color: #aaa;
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.85rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        margin-top: 3rem;
+     }
+
+
+     /* Responsive */
+     @media (max-width: 768px) {
+        .page-header h1 {
+           font-size: 2rem;
+        }
+
+
+        .recipes-grid {
+           grid-template-columns: 1fr;
+           gap: 2rem;
+        }
+     }
+  </style>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg"> 
+   <div class="container-fluid">
+    <a class="navbar-brand" href="websitee.html">TastyEats</a>
+    <button class="navbar-toggler" type="button"
+                   data-bs-toggle="collapse" data-bs-target="#mainNav"
+           aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon" style="filter:invert(1)"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav">
+            <li class="navbar-item"><a class="nav-link" href="websitee.html">Home</a></li>
+            <li class="navbar-item"><a class="nav-link active" href="recipes.html">Recipes</a></li>
+            <li class="navbar-item"><a class="nav-link" href="#">Contact Me</a></li>
+        </ul>
+    </div>
+   </div>
+   </nav>
+   
+   <div class="page-header">
+        <h1>Our Recipes</h1>
+        <div class="divider"></div>
+        <p>Explore our collection of delicious dishes</p>
+   </div>
+
+   <div class="recipes-container">
+    <div class="recipes-grid">
+        <div class="recipe-card">
+            <img src="https://s.lightorangebean.com/media/20240914160809/Spicy-Penne-Pasta_-done.png" alt="Spicy Penne Pasta" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Spicy Penne Pasta</h2>
+                <p class="recipe-caption">A flavorful pasta dish with a kick of spice</p>
+                <button class="recipe-button">View Recipe</button>
+            </div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="https://fishandmeat.hk/wp-content/uploads/2025/05/arabic-chicken-shawarma-sandwich-recipe-1747792750.jpg" alt="Arabian Chicken Shawarma" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Arabian Chicken Shawarma</h2>
+                <p class="recipe-caption">Tender chicken wrapped in flavorful Middle Eastern spices</p>
+                <button class="recipe-button">View Recipe</button>
+            </div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="https://www.allrecipes.com/thmb/EGp48npVJqDku38H1CFWwgwfAmM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/57661-tomato-bisque-iii-VAT-007-4x3-44151fe6eccf42e2b7fecb632f3ff198.jpg" alt="Tomato Bisque" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Tomato Bisque</h2>
+                <p class="recipe-caption">A creamy and comforting soup made with ripe tomatoes</p>
+                <button class="recipe-button">View Recipe</button>
+            </div>
+        </div>
+    </div>
+   </div>
+
+   <footer class="footer">
+        <p>&copy; 2026 TastyEats. All rights reserved.</p>
+   </footer>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
