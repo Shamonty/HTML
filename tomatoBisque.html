@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creamy Tomato Bisque Recipe - TastyEats</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+     :root {
+        --cream: #f5eee0;
+        --dark: #1e1e1a;
+        --accent: #c8703a;
+     }
+
+
+     body {
+        font-family: 'Lato', sans-serif;
+        background: var(--cream);
+        color: var(--dark);
+     }
+
+
+     /* Navbar */
+     .navbar {
+        background: var(--dark) !important;
+        padding: 1.2rem 2rem;
+     }
+
+
+     .navbar-brand {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        color: var(--cream) !important;
+        letter-spacing: 1px;
+     }
+
+
+     .nav-link {
+        color: #ccc !important;
+        font-weight: 300;
+        letter-spacing: 1.5px;
+
+
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        margin: 0 0.5rem;
+        transition: color 0.2s;
+     }
+
+
+     .nav-link:hover,
+     .nav-link.active {
+        color: var(--accent) !important;
+     }
+
+
+     /* Recipe Content */
+     .recipe-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+     }
+
+
+     .recipe-header {
+        text-align: center;
+        margin-bottom: 3rem;
+     }
+
+
+     .recipe-header h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        color: var(--dark);
+     }
+
+
+     .recipe-description {
+        font-size: 1.1rem;
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+        font-weight: 300;
+        text-align: center;
+     }
+
+
+     /* Video Section */
+     .video-section {
+        margin: 3rem 0;
+ border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+     }
+
+
+     .video-wrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+     }
+
+
+     .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+     }
+
+
+     /* Section Heading */
+     .section-heading {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: var(--dark);
+        font-weight: 700;
+        position: relative;
+        padding-bottom: 1rem;
+     }
+
+
+     .section-heading::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: var(--accent);
+     }
+/* Ingredients */
+     .ingredients-list {
+        list-style: none;
+        padding: 0;
+     }
+
+
+     .ingredients-list li {
+        padding: 0.8rem 0;
+        border-bottom: 1px solid #e0d5c7;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+     }
+
+
+     .ingredients-list li:last-child {
+        border-bottom: none;
+     }
+
+
+     .ingredients-list li::before {
+        content: '✓';
+        margin-right: 1rem;
+        color: var(--accent);
+        font-weight: bold;
+     }
+
+
+     /* Instructions */
+     .instructions-list {
+        list-style: none;
+        padding: 0;
+     }
+
+
+     .instruction-item {
+        margin-bottom: 2rem;
+        padding-left: 60px;
+        position: relative;
+     }
+
+
+     .instruction-number {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 45px;
+
+
+        height: 45px;
+        background: var(--accent);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.1rem;
+     }
+
+
+     .instruction-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.2rem;
+        color: var(--dark);
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+     }
+
+
+     .instruction-text {
+        color: #666;
+        line-height: 1.7;
+        font-size: 1rem;
+        font-weight: 300;
+     }
+
+
+     /* Back Button */
+     .back-button {
+        display: inline-block;
+        margin-bottom: 2rem;
+        padding: 0.7rem 1.5rem;
+        background: var(--accent);
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: background 0.3s ease;
+     }
+
+
+     .back-button:hover {
+
+
+        text-decoration: none;
+        color: white;
+     }
+
+
+     /* Footer */
+     footer {
+        background: var(--dark);
+        color: #aaa;
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.85rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        margin-top: 4rem;
+     }
+
+
+     /* Responsive */
+     @media (max-width: 768px) {
+        .recipe-header h1 {
+           font-size: 2rem;
+        }
+
+
+        .section-heading {
+           font-size: 1.5rem;
+        }
+
+
+        .recipe-container {
+           padding: 2rem 1.5rem;
+        }
+     }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+     <div class="container-fluid">
+        <a class="navbar-brand" href="websitee.html">TastyEats</a>
+        <button class="navbar-toggler" type="button"
+           data-bs-toggle="collapse" data-bs-target="#mainNav"
+           aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+
+
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+           <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="websitee.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link active" href="recipes.html">Recipe</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Contact Me</a></li>
+           </ul>
+        </div>
+     </div>
+  </nav>
+
+
+  <div class="recipe-container">
+     <a href="recipes.html" class="back-button">← Back to Recipes</a>
+
+
+     <div class="recipe-header">
+        <h1>Creamy Tomato Bisque</h1>
+        <p class="recipe-description">
+          A smooth, velvety tomato bisque enriched with cream and aromatic herbs, delivering warmth and comfort in every spoonful.
+        </p>
+     </div>
+
+
+     <!-- YouTube Video -->
+     <div class="video-section">
+        <div class="video-wrapper">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/Qo97J5LsK4U?si=4w2umNUTvqNpkADd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+     </div>
+
+
+     <!-- Ingredients Section -->
+     <h2 class="section-heading">Ingredients</h2>
+     <ul class="ingredients-list">
+        <li>¼ cup butter</li>
+        <li>1 small onion, finely chopped</li>
+        <li>1 stalk celery, finely chopped</li>
+        <li>1 carrot, finely chopped</li>
+        <li>2 cloves garlic, minced</li>
+        <li>3 tablespoons all-purpose flour</li>
+        <li>4 cups chicken broth</li>
+        <li>2 (14.5 ounce) cans fire roasted diced tomatoes, drained</li>
+        <li>3 tablespoons white sugar or to taste</li>
+        <li>3 tablespoons tomato paste</li>
+        <li>¼ teaspoon ground nutmeg or to taste</li>
+        <li>¼ cup heavy cream</li>
+        <li>salt and black pepper to taste</li>
+     </ul>
+
+
+     <!-- Instructions Section -->
+     <h2 class="section-heading">Instructions</h2>
+     <ol class="instructions-list">
+        <li class="instruction-item">
+           <div class="instruction-number">1</div>
+           <div class="instruction-title">Prepare ingredients to a saucepan and stir</div>
+           <p class="instruction-text">
+             Gather all ingredients. Melt butter in a large saucepan over medium heat. Add onion, celery, carrot, and garlic; cook and stir until vegetables are tender and beginning to brown, about 3 to 5 minutes. Stir in flour and cook 1 minute more, stirring constantly.
+           </p>
+        </li>
+
+
+        <li class="instruction-item">
+           <div class="instruction-number">2</div>
+           <div class="instruction-title">Add ingredients and simmer</div>
+           <p class="instruction-text">
+            Stir in chicken broth, tomatoes, sugar, tomato paste, and nutmeg. Bring to a boil over high heat, then reduce heat to medium-low. Cover and simmer until vegetables are very tender, about 10 minutes. 
+           </p>
+        </li>
+
+
+        <li class="instruction-item">
+           <div class="instruction-number">3</div>
+           <div class="instruction-title">Puree soup in a blender or food processor</div>
+           <p class="instruction-text">
+            Puree soup in a blender or food processor until silky smooth or to your preferred consistency. Alternatively, you can use a stick blender and puree soup in the saucepan.
+           </p>
+        </li>
+
+
+        <li class="instruction-item">
+           <div class="instruction-number">4</div>
+           <div class="instruction-title">Add cream</div>
+           <p class="instruction-text">
+             Stir cream into blended soup. Cook and stir over medium heat until bisque is hot.
+           </p>
+        </li>
+
+
+        <li class="instruction-item">
+           <div class="instruction-number">5</div>
+           <div class="instruction-title">Serve</div>
+           <p class="instruction-text">
+             Season to taste with salt and pepper before serving.
+           </p>
+        </li>
+     </ol>
+  </div>
+
+
+  <footer>
+     <p>&copy; 2026 TastyEats. All rights reserved.</p>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
